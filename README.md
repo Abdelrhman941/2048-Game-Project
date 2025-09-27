@@ -93,22 +93,33 @@ flask --app gui.gui run --reload
 ## Project structure
 
 ```
-├── Model/                 # Saved checkpoints (created at runtime)
-│   └── run-YYYYMMDD-HHMMSS/
-│       ├── logs/          # TensorBoard logs
-│       ├── dqn_checkpoint.keras
-│       ├── dqn_ep*.keras  # Episode checkpoints
-│       └── training_history.json
-├── flask-app/             # Enhanced Flask web application
-│   ├── app.py            # Main Flask server
-│   ├── static/           # CSS, JS, assets
-│   └── templates/        # HTML templates
-├── game2048/             # Environment, agent, and training utilities
-├── gui/                  # Basic Flask interface
-├── notebooks/            # Exploration and training notebooks
-├── tests/                # Pytest-based smoke tests
-├── docs/                 # Reference material
-└── requirements.txt      # Python dependencies
+2048-DeepRL/
+├── docs/
+│   ├── DQN.png
+│   └── Deep-Q-Network-for-2048-Game.pptx
+├── flask-app/
+│   ├── static/
+│   │   ├── game.js
+│   │   └── style.css
+│   ├── templates/
+│   │   └── index.html
+│   └── app.py
+├── game2048/
+│   ├── agent.py
+│   ├── game.py
+│   └── train.py
+├── notebooks/
+│   └── Train.ipynb
+├── tests/
+│   ├── test_agent.py
+│   └── test_game.py
+├── .dockerignore
+├── .gitignore
+├── DOCKER-DEPLOYMENT.md
+├── Dockerfile
+├── README.md
+├── docker-compose.yml
+└── requirements.txt
 ```
 
 ## Tips & next steps
